@@ -110,6 +110,7 @@ if __name__ == '__main__':
 
 
     # net = models.UNetFamily.Dense_Unet(1,2).to(device)
+    # net = models.UNetFamily.U_Net(1, 2).to(device)
     net = models.LadderNet(inplanes=1, num_classes=2, layers=3, filters=16).to(device)
     cudnn.benchmark = True
 

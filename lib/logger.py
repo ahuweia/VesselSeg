@@ -29,7 +29,7 @@ class Logger():
     def update_csv(self,item):
         tmp = pd.DataFrame(item,index=[0])
         if self.log is not None:
-            self.log = self.log.append(tmp, ignore_index=True)
+            self.log = pd.concat([self.log, tmp], ignore_index=True)
         else:
             self.log = tmp
         self.log.to_csv('%s/log%s.csv' %(self.name,self.time_now), index=False)

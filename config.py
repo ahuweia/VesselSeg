@@ -6,7 +6,7 @@ def parse_args():
     # in/out
     parser.add_argument('--outf', default='./experiments',
                         help='trained model will be saved at here')
-    parser.add_argument('--save', default='UNet_vessel_seg',
+    parser.add_argument('--save', default='LadderNet',
                         help='save name of experiment in args.outf directory')
 
     # data
